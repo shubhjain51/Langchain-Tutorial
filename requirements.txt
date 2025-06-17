@@ -1,0 +1,10 @@
+# langchain
+# openai
+# streamlit
+# python-dotenv
+# langchain-community
+
+langchain
+langchain-google-genai
+streamlit
+python-dotenv

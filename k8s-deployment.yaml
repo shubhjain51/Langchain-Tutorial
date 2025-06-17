@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gemini-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gemini-app
+  template:
+    metadata:
+      labels:
+        app: gemini-app
+    spec:
+      containers:
+      - name: gemini-app
+        image: mygeminiacr12345.azurecr.io/gemini-app:latest  # 🔁 Replace with your ACR image path
+        ports:
+        - containerPort: 8501
+        env:
+        - name: GOOGLE_API_KEY
+          value: "your_google_api_key"
